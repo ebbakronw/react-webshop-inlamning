@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Products from './pages/Products';
-// import App from './App'
-// import Products from './pages/Products';
+import App from './App'
 
 ReactDOM.render(
 
    <React.StrictMode>
-   <Products/>
-   {/* <App /> */}
-   {/* <Products /> */}
+   <App />
   </React.StrictMode>, 
   document.getElementById('root')
 );

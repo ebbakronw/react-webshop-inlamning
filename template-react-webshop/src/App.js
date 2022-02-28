@@ -7,6 +7,7 @@ import {
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
+import Product from './pages/Product';
 
 function App(){
   return (
@@ -15,6 +16,7 @@ function App(){
       <Header/>
         <Routes>
             <Route path="/" element={<Products />} />
+            <Route path="/product/:id" element={<Product />} />
             <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
