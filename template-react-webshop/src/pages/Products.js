@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+import Product from './Product';
 
 function Products() {
   const [cakes, setCakes] = useState([])
-
 
   const fetchData = async () => {
     try {
@@ -11,7 +11,8 @@ function Products() {
       const data = await response.json();
       console.log(data)
       setCakes(data);
-    } catch(error) {
+    } 
+    catch(error) {
     }
   }
 
@@ -22,18 +23,25 @@ function Products() {
 
   return (
       <div>
-          <h1>Cake House Stockholm</h1>
+        <div className="cloud">
+          <h1 className='title-shop'>Cake House <br></br> Stockholm</h1>
+        </div>
           {
             cakes.map(cakes => (
-              <article key={cakes.id}>
-                <img src={cakes.url} alt="Picture of cake"></img>
-                <p>{cakes.title}</p>
-                <p>{cakes.price}</p>
-                <a href={`https://codexplained.se/cakes.php?id=${cakes.id}`}><button>Read more</button></a>
-                <button>Add to Cart</button>
+              <article className='articles' key={cakes.id}>
+                <Link to={`/product/${cakes.id}`}> <img src={cakes.url} alt={cakes.title}></img></Link> 
+                <div className='title'>
+                  <h2 className='titleText'>{cakes.title}</h2>
+                </div>
+                <h4>{cakes.price} SEK</h4>
+                <div className='buttons'>
+                  <a href={`https://codexplained.se/cakes.php?id=${cakes.id}`}><button className='btns'>Read more</button></a>
+                  <button className='btns'>Add to Cart</button>
+                </div>
               </article>
-            ))
-          }
+            )
+           )
+         }
 
       </div>
   )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -8,19 +8,27 @@ import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Product from './pages/Product';
+import Cart from './components/Cart';
 
 function App(){
+  const [items, setItems] =useState([]);
+    
+    
   return (
     <div className="App">
       <BrowserRouter>
-      <Header/>
+      <Header items={items}/>
+      <Cart/>
         <Routes>
-            <Route path="/" element={<Products />} />
-            <Route path="/product/:id" element={<Product />} />
+            <Route path="/" element={<Products/>} />
+            <Route path="/product/:id" element={<Product/>} />
             <Route path="/checkout" element={<Checkout />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
     </div>
   );
 }
 export default App;
+
+
+/*APP*/ 

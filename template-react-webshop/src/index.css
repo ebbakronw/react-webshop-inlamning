@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,100 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  background: #E2CACB;
+  color: white;
+  height: 4vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+.title-shop {
+  color: #FFFFFF;
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+.cloud {
+    width: 330px; height: 100px;
+    background: #E2CACB;
+    border-radius: 100px;
+    position: relative;
+    margin: 120px auto 20px;
+  }
+   .cloud:after, .cloud:before {
+    content: '';
+    position: absolute;
+    background: #E2CACB;
+    z-index: -1
+  }
+
+  .cloud:after {
+    width: 100px; height: 100px;
+    top: -50px; left: 50px;
+    border-radius: 100px;
+  }
+  
+  .cloud:before {
+    width: 150px; height: 150px;
+    top: -90px; right: 50px;
+    border-radius: 200px;
+  } 
+ 
+
+.articles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.title {
+  font-size: 23px;
+  color: white;
+  background-color: #E2CACB;
+  width: 20vw;
+  height: 40px;
+  position: relative;
+}
+
+.titleText {
+  font-family: 'Roboto';
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img {
+  max-width: 16rem;
+  max-height: 16rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 36vw; 
+  border: 1px solid green;
+}
+
+.btns {
+  display: flexbox;
+  padding: 0.8rem 0;
+  width: 50%;
+  height: 50px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  border: none
 }
