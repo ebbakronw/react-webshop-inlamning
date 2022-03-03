@@ -1,30 +1,34 @@
-import './App.css';
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Footer from './components/Footer'
-import Product from './pages/Product';
+import React, {useState} from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Products from './pages/Products';
-import Checkout from './pages/Checkout'
+import Checkout from './pages/Checkout';
+import Header from './components/Header';
+import Product from './pages/Product';
+import Cart from './components/Cart';
 
-function App() {
+function App(){
+  const [items, setItems] =useState([]);
+    
+    
   return (
     <div className="App">
-      Webshop in React
-    <BrowserRouter>
-
-    <Routes>
-      <Route path="/" element={<Products />}/>
-      <Route path="/products/:ebba" element={<Product />} />
-      <Route path="/checkout" element={<Checkout />} />
-    </Routes>
-    
-    <Footer />
-    
-    </BrowserRouter>
-
-    
+      <BrowserRouter>
+      <Header items={items}/>
+      <Cart/>
+        <Routes>
+            <Route path="/" element={<Products/>} />
+            <Route path="/product/:id" element={<Product/>} />
+            <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </BrowserRouter> 
     </div>
   );
 }
-
 export default App;
+
+
+/*APP*/ 
