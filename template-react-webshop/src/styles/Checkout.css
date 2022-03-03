@@ -1,7 +1,12 @@
-.checkout-box{
-    margin-top: 9rem;
-    border: 1px black;
-    height: 20rem;
+.form-control{
+  padding: 1rem;
+
+    width: 400px;
+    height: 2px;
+}
+
+.wrapper{
+  display: flex;
 }
 .icon-container img{
   margin: 5px;

@@ -1,14 +1,24 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../styles/Checkout.css'
 
 
-function Checkout({items}) {
+function Checkout({items, sum}) {
 
 
   return (
 
   <>
+  <div className='wrapper'>
+  <div className='products-checkout'>
 
+       {items.length < 1 ? 
+       <div>
+            <h4>Det finns inga produkter</h4>
+       <Link to="/"><button>Back</button></Link>
+       </div> 
+       :
+       <div className='products-description'>
  {
       items.map(item => (
            <table>
@@ -18,66 +28,49 @@ function Checkout({items}) {
                 <td><h3>{item.price}</h3></td>
                 </tr>
            </table>
-      ))
- }
+      ))}
+      <div className='total'>Total price: {sum}</div>
+ </div>
+}
+ </div>
+    
 
+    <div className='input-container'>
 
-
-  <div className='checkout-box'>
-   <div className='checkout-product'>
-     
-   </div>
-   <div>
-     <div className='checkout-header'>
-       <h3>Back to Products</h3>
-       </div>
-     </div>
-
-    <div className='row'>
     <div className='checkout-container'>
          <label> Firstname</label>
          <input type="text" namn="firstname" className='form-control' />
     </div>
-    </div>
 
-    <div className='row'>
     <div className='checkout-container'>
          <label> Lastname</label>
          <input type="text" namn="lastname" className='form-control' />
     </div>
-    </div>
 
-    <div className='row'>
     <div className='checkout-container'>
          <label> Phone-number </label>
          <input type="text" namn="phone" className='form-control' />
     </div>
-    </div>
 
-    <div className='row'>
     <div className='checkout-container'>
          <label> City </label>
          <input type="text" namn="city" className='form-control' />
     </div>
-    </div>
 
-    <div className='row'>
     <div className='checkout-container'>
          <label> State</label>
          <input type="text" namn="state" className='form-control' />
     </div>
-    </div>
 
-    <div className='row'>
     <div className='checkout-container'>
          <label> Zip Code</label>
          <input type="text" namn="lastzipcode" className='form-control' />
     </div>
+
     </div>
 
-    <div className='row'>
-    <div className='checkout-container'>
-    <div class="col-50">
+
+    <div className='checkout-payments'>
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
@@ -86,17 +79,15 @@ function Checkout({items}) {
             <img src="https://img.icons8.com/ios/50/000000/amex.png"/>
     </div>
     </div>
-    </div>
-    </div>
-
-    <div className='row'>
+   
     <div className='checkout-container'>
          <button type='button' className='checkout-btn'> Place Order</button>
     </div>
+   
     </div>
   
-  </div>
-  </>
+ 
+ </>
   )
 }
 export default Checkout

@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 
 function App(){
   const [items, setItems] = useState([]);
+  const [sum, setSum] = useState (0);
   
   const addProducts = (newItem) => {
 
@@ -20,6 +21,12 @@ function App(){
       ...items,
       newItem
     ])
+    if (sum === 0) {
+      setSum(newItem.price)
+  } else {
+      setSum(sum + newItem.price)
+  }
+
   }
     
     
@@ -31,7 +38,7 @@ function App(){
         <Routes>
             <Route path="/" element={<Products/>} />
             <Route path="/product/:id" element={<Product addProducts={addProducts}/>} />
-            <Route path="/checkout" element={<Checkout items={items} />} />
+            <Route path="/checkout" element={<Checkout items={items} sum={sum}/>} />
         </Routes>
         <Footer />
       </BrowserRouter> 
