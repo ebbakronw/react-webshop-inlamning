@@ -14,13 +14,15 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Products />}/>
-      <Route path="/products/:id" element={<Product />} />
-      <Route path="/checkout" element={<Checkout />}/>
+      <Route path="/products/:ebba" element={<Product />} />
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
     
     <Footer />
     
     </BrowserRouter>
+
+    
     </div>
   );
 }

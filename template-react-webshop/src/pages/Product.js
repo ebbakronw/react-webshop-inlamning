@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import '../styles/Product.css';
 
 
 function Product() {
@@ -8,7 +9,7 @@ function Product() {
   
   const fetchData = async () => {
     try {
-    const response = await fetch('https://codexplained.se/cakes.php?id=234967');
+    const response = await fetch('https://codexplained.se/cakes.php?id=' + params.ebba);
     const data = await response.json();
     console.log(data);
     
@@ -24,10 +25,10 @@ function Product() {
     }, []);
 
   return (
-    <div>
+    <div className='cake-container'>
       
         <article key={cake.id}>
-          <img src={cake.url} alt="picture of cake" /> 
+          <img className="product-image" src={cake.url} alt="cake" /> 
           <p>{cake.title}</p>
           <p>{cake.price}</p>
           <p>{cake.description}</p>
