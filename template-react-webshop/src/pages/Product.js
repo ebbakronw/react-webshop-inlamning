@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import '../styles/Product.css';
 
 
-function Product() {
+function Product({addProducts}) {
   const [cake, setCake] = useState({});
   const params = useParams();
   
@@ -24,6 +24,11 @@ function Product() {
      fetchData();
     }, []);
 
+    const handleClick = (cake) => {
+      addProducts(cake)
+      console.log(handleClick)
+    }
+
   return (
     <div className='cake-container'>
       
@@ -37,7 +42,7 @@ function Product() {
           </div>
           <div className='storage-container'>
              <p className='product-storage'>Storage: {cake.storage}</p>
-             <button className='toCart-btn'>Add to Cart</button>
+             <button onClick={() => handleClick(cake)} className='toCart-btn'>Add to Cart</button>
           </div>
         </article>
 

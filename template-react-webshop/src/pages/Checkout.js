@@ -2,12 +2,28 @@ import React from 'react'
 import '../styles/Checkout.css'
 
 
-function Checkout() {
+function Checkout({items}) {
 
 
   return (
 
-  <table className='checkout-box'>
+  <>
+
+ {
+      items.map(item => (
+           <table>
+                <tr>
+                <td><img src={item.url} alt='image' className='checkout-img'></img></td>
+                <td><h1>{item.title}</h1></td>
+                <td><h3>{item.price}</h3></td>
+                </tr>
+           </table>
+      ))
+ }
+
+
+
+  <div className='checkout-box'>
    <div className='checkout-product'>
      
    </div>
@@ -79,7 +95,8 @@ function Checkout() {
     </div>
     </div>
   
-  </table>
+  </div>
+  </>
   )
 }
 export default Checkout

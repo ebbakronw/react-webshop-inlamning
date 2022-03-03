@@ -12,7 +12,15 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 
 function App(){
-  const [items, setItems] =useState([]);
+  const [items, setItems] = useState([]);
+  
+  const addProducts = (newItem) => {
+
+    setItems ([
+      ...items,
+      newItem
+    ])
+  }
     
     
   return (
@@ -22,8 +30,8 @@ function App(){
       <Cart/>
         <Routes>
             <Route path="/" element={<Products/>} />
-            <Route path="/product/:id" element={<Product/>} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/product/:id" element={<Product addProducts={addProducts}/>} />
+            <Route path="/checkout" element={<Checkout items={items} />} />
         </Routes>
         <Footer />
       </BrowserRouter> 
