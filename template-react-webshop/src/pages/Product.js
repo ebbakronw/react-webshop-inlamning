@@ -29,14 +29,19 @@ function Product() {
       
         <article key={cake.id}>
           <img className="product-image" src={cake.url} alt="cake" /> 
-          <p>{cake.title}</p>
-          <p>{cake.price}</p>
-          <p>{cake.description}</p>
-          <p>{cake.storage}</p>
-          <button>Add to Cart</button>
+
+          <div className='product-info'>
+             <p className='product-title'>{cake.title}</p>
+             <p className='product-desc'>{cake.description}</p>
+             <p className='product-price'>Price: {cake.price}</p> 
+          </div>
+          <div className='storage-container'>
+             <p className='product-storage'>Storage: {cake.storage}</p>
+             <button className='toCart-btn'>Add to Cart</button>
+          </div>
         </article>
 
-    <h1>cake with id: {params.id}</h1>
+    
     
     </div>
   )

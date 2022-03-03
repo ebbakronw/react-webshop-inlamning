@@ -1,0 +1,23 @@
+.footer-container{
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #E2CACB; 
+}
+
+.cake-title{
+    text-align: center;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.adress-info{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+}
+.copyright{
+    text-align: center;
+    font-size: 8px;
+}

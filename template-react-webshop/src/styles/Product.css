@@ -1,9 +1,43 @@
-div .cake-container{
+.cake-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #E2CACB;
+    margin: 150px;
 }
-img{
-max-width: 18rem;
-max-height: 18rem;
+.product-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+.product-title{
+    font-size: 25px;
+    font-weight: 800;
+}
+.product-desc{
+  margin: 0 auto;
+  width: 400px;
+}
+.product-price{
+    font-size: 24px;
+    font-weight: 600;
+}
+.product-image{
+    width: 450px;
+    height: auto;
+    margin-top: 150px;
+    box-shadow:  20px 20px 30px rgba(87, 84, 84, 0.2);
+}
+.storage-container{
+    margin-bottom: 30px;
+}
+.product-storage{
+    font-size: 12px;
+    font-weight: 400;
+}
+.toCart-btn{
+    border-radius: 4px;
+    border:1px solid black;
+
+}
+
