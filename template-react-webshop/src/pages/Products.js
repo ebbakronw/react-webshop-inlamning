@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import {Link} from 'react-router-dom'
-import Product from './Product';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function Products() {
-  const [cakes, setCakes] = useState([])
+function Products({addProduct}) {
+  const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://codexplained.se/cakes.php');
+      const response = await fetch("https://codexplained.se/cakes.php");
       const data = await response.json();
-      console.log(data)
-      setCakes(data);
-    } 
-    catch(error) {
+      console.log(data);
+      setProducts(data);
+    } catch (error) {
+
     }
   }
 
@@ -20,33 +19,36 @@ function Products() {
     fetchData();
   }, []);
 
+  const handleClick = (product) => {
+    addProduct(product)
+    console.log(product);
+  }
+
 
   return (
-      <div>
-        <div className="cloud">
-          <h1 className='title-shop'>Cake House <br></br> Stockholm</h1>
-        </div>
-          {
-            cakes.map(cakes => (
-              <article className='articles' key={cakes.id}>
-                <Link to={`/product/${cakes.id}`}> <img src={cakes.url} alt={cakes.title}></img></Link> 
-                <div className='title'>
-                  <h2 className='titleText'>{cakes.title}</h2>
-                </div>
-                <h4>{cakes.price} SEK</h4>
-                <div className='buttons'>
-                  <a href={`https://codexplained.se/cakes.php?id=${cakes.id}`}><button className='btns'>Read more</button></a>
-                  <button className='btns'>Add to Cart</button>
-                </div>
-              </article>
-            )
-           )
-         }
-
+    <div>
+      <div className="cloud">
+        <h1 className="title-shop">
+          Cake House <br></br> Stockholm
+        </h1>
       </div>
-  )
+      {products.map((product) => (
+        <article className="products-view" key={product.id}>
+          <Link to={`/product/${product.id}`}>
+            {" "}
+            <img className="img-page" src={product.url} alt={product.title}></img>
+          </Link>
+          <div className="products-title">
+            <h2 className="products-title-text">{product.title}</h2>
+          </div>
+          <div className="products-button">
+            <h4 className="products-price">SEK {product.price}</h4>
+            <button onClick={() => {handleClick(product)}} className="cart-btn">Add to Cart</button>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
 }
 
-export default Products
-
-
+export default Products;
