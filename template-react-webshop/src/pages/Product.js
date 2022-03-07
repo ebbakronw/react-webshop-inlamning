@@ -52,5 +52,4 @@ function Product({addProducts}) {
   )
   }
 
-
 export default Product

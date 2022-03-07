@@ -1,20 +1,19 @@
 .footer-container{
+    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100px;
+    height: 200px;
     background-color: #E2CACB; 
 }
-
-.cake-title{
-    text-align: center;
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
+.footer-text{
+   margin: 0 auto;
+   text-align: center;
 }
+.cake-title{
+    font-size: 25px;
 
+}
 .adress-info{
-    text-align: center;
-    font-size: 12px;
+    font-size: 18px;
 }
 .copyright{
     text-align: center;

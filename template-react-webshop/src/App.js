@@ -1,9 +1,5 @@
 import React, {useState} from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
