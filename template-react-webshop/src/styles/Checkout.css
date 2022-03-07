@@ -1,12 +1,41 @@
+/* No products in checkout */
+.no-products{
+  margin: 160px 550px;
+}
+.no-products-text{
+  width: 200px;
+  margin-right: 200px;
+  font-size: 25px;
+}
+.home-checkout-btn{
+  margin-left: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #E2CACB;
+  border: 2px solid black;
+}
+/* products in checkout */
 .form-control{
-  padding: 1rem;
-
+    padding: 1rem;
     width: 400px;
     height: 2px;
 }
-
 .wrapper{
   display: flex;
+}
+.products-description{
+   width: 50%;
+}
+.checkout-img{
+  width: 200px;
+  height: auto;
+}
+.checkout-title{
+ 
+}
+.input-continer{
+  
 }
 .icon-container img{
   margin: 5px;
