@@ -17,7 +17,7 @@ function Header({setItems, items, countCartItems, sum}) {
         <Link to="/"><h3 className='header-nav-text'>Home</h3></Link> <Link to="/checkout"><h3 className='header-nav-text'>Checkout</h3></Link> 
       </div>
         <div className="header-menu"> 
-          <button className='shop-btn' onClick={() => setOpen(!open)}>Test</button>
+          <button className='shop-btn' onClick={() => setOpen(!open)}><HiOutlineShoppingBag/></button>
               {countCartItems ? (
                 <button className='count-btn'>{countCartItems}</button>
               ) : 

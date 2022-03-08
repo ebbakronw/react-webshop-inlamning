@@ -2,7 +2,6 @@
 
  .header {
     background: #E2CACB;
-    color: white;
     height: 6vh;
     text-align: center;
   }
@@ -31,6 +30,15 @@
   }
   
    .shop-btn{
+    font-size: 1.6rem;
+    height: 5vh;
+    width: 2.1vw;
+    padding: 0.8rem;
+    margin-right: 10px;
+    background-color: #E2CACB;
+    color: white;
+    border: none;
+    border-radius: 50%;
     
   }
   .count-btn{

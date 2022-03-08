@@ -6,8 +6,6 @@
   }
   
   .products-title {
-    color: white;
-    background-color: #E2CACB;
     width: 20vw;
     height: 40px;
     position: relative;
@@ -27,8 +25,11 @@
   }
   
   .products-price{
-    font-weight: 100;
     font-size: 13px;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    font-weight: 700;
   }
   
   .img-page {
@@ -44,19 +45,7 @@
   } 
   
    .cart-btn {
-     padding: 0.8rem 0;
-    font-size: 12px;
-    width: 10vw;
-    height: 50px;
-    background-color: #E2CACB;
-    color: white;
-    margin-top: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.6s ease;
-    border: none;
-    border-radius: 100%; 
-  /*   text-align: center;
+    text-align: center;
     margin-bottom: 50px;
     width: 100px;
     height: 50px;
@@ -64,6 +53,8 @@
     background-color: #E2CACB;
     border: 3px solid black;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
   
   .cart-btn:hover{
@@ -71,7 +62,7 @@
     border-top-color:#d26e71;
     border-bottom-color: #f0b4b6;
     border-right-color:#f09b9e;
-    border-left-color: #e9bbbb; */
+    border-left-color: #e9bbbb; 
   }
   /* -------- PRODUCTS DONE -------- */
   

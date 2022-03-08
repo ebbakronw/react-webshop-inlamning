@@ -1,7 +1,6 @@
 /* -------- CART START -------- */
 .cart-header {
     position: relative;
-    color: white;
     font-size: 16px;
     height: 8vh;
     margin-top: -5px;
@@ -9,7 +8,6 @@
   
   
   .home-cart-container{
-      
     transition: 500ms;
     transform: translateX(-100%);
     position: fixed;
@@ -26,6 +24,8 @@
     max-width: 4rem;
     max-height: 4rem;
     object-fit: cover;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   
   .empty-cart{
@@ -48,6 +48,7 @@
   
   .cart-title{
     font-size: 12px;
+    margin: 5px;
   }
   
   .cart-price{
@@ -62,20 +63,26 @@
   }
   
   .cart-checkout{
-    padding: 0.8rem 0;
-    font-size: 12px;
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 3px;
-    background-color: #ffffff;
-    color: #E2CACB;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #E2CACB;
+    border: 3px solid black;
+    font-weight: 700;
     cursor: pointer;
-    text-transform: uppercase;
-    border: none;
-  
+    transition: all 0.2s ease;
   }
 
 
+.cart-checkout:hover{
+  border: 5px solid black;
+  border-top-color:#d26e71;
+  border-bottom-color: #f0b4b6;
+  border-right-color:#f09b9e;
+  border-left-color: #e9bbbb; 
+}
 
     /* -------- CART DONE -------- */
   
