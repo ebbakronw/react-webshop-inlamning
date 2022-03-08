@@ -21,8 +21,8 @@ function Checkout({items, sum}) {
                     {items.map(item => (
                          <table className='checkout-info-parent'>
                               <tr className='checkout-info'>
-                              <td><img src={item.url} alt='image' className='checkout-img'></img></td>
-                              <td><h1 className='checkout-title'>{item.title}</h1></td>
+                              <td><img src={item.url} alt='image' className='checkout-image'></img></td>
+                              <td><h1 className='checkout-titl'>{item.title}</h1></td>
                               <td><h3 className='checkout-price'>{item.price} SEK</h3></td>
                               </tr>
                          </table>
