@@ -26,7 +26,7 @@ function Checkout({items, sum}) {
                               </tr>
                          </table>
                     ))}
-                    <div className='total-price'>Total price: {sum} KR</div>
+                    <div className='total-price'>Total price: {sum} SEK</div>
                     </div>
 
                     <div className='input-container'>
