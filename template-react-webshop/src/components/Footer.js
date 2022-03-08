@@ -9,7 +9,7 @@ function Footer() {
       <p className='adress-info'>
       Upplandsgatan 38, 113 12 Stockholm
       <br/>
-      070-56 67 45
+      Contact: 070-56 67 45
       </p>
       <p className='copyright'>Copyright &copy; </p>
       </div>
