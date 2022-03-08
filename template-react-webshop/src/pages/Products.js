@@ -8,7 +8,6 @@ function Products({addProduct}) {
     try {
       const response = await fetch("https://codexplained.se/cakes.php");
       const data = await response.json();
-      console.log(data);
       setProducts(data);
     } catch (error) {
 
@@ -21,7 +20,6 @@ function Products({addProduct}) {
 
   const handleClick = (product) => {
     addProduct(product)
-    console.log(product);
   }
 
 

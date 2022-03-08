@@ -11,14 +11,16 @@ function Header({setItems, items, countCartItems, sum}) {
     <>
     <div className='header'>
       <div className='header-top'>
-        <Link to="/"><h3 className='header-nav'>Home</h3></Link> 
+      <div className='header-nav'>
+        <Link to="/"><h3 className='header-nav-text'>Home</h3></Link> <Link to="/checkout"><h3 className='header-nav-text'>Checkout</h3></Link> 
+      </div>
         <div className="header-menu"> 
+          <button className='shop-btn' onClick={() => {setOpen(true)}}><HiOutlineShoppingBag/></button>
               {countCartItems ? (
                 <button className='count-btn'>{countCartItems}</button>
               ) : 
                 ''
               }
-              <button className='shop-btn' onClick={() => {setOpen(true)}}><HiOutlineShoppingBag/></button>
               </div>
       </div>
       <Cart setItems={setItems} 

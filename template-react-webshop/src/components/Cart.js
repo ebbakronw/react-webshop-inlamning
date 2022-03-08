@@ -7,7 +7,7 @@ function Cart({items, open, sum}) {
     <>
       <div className='cart-container'>
         <div className='cart-header'>
-          <h2 className="cart-title">Cart</h2>
+          <h2 className="cart-opening">Cart</h2>
         </div>
         <div>{items.length === 0 && <h3 className='empty-cart'>Cart is currently empty. Add some cakes to start shopping!</h3>}</div>
         <div className="product-cart-container">
