@@ -1,0 +1,82 @@
+ /* -------- HEADER START -------- */
+
+ .header {
+    background: #E2CACB;
+    color: white;
+    height: 6vh;
+    text-align: center;
+  }
+  
+  .header-top {
+    border: 1px solid #E2CACB;
+  }
+  
+  .header-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .header-nav-text{
+    font-size: 17px;
+    color: white;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  
+  .header-menu {
+    display: flex; 
+    flex-direction: row;
+    margin-top: -3.6rem;
+  }
+  
+   .shop-btn{
+    
+  }
+  .count-btn{
+    font-size: 0.8rem;
+    height: 20px;
+    width: 20px;
+    margin-top: 8px;
+    margin-right: 2px;
+    background-color: white;
+    color: #E2CACB;
+    border-radius: 50%;
+    border: none;
+  } 
+  .title-shop {
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+   .cloud {
+      width: 330px; height: 100px;
+      background: #E2CACB;
+      border-radius: 100px;
+      position: relative;
+      margin: 120px auto 20px;
+    }
+     .cloud:after, .cloud:before {
+      content: '';
+      position: absolute;
+      background: #E2CACB;
+      z-index: -1
+    }
+  
+    .cloud:after {
+      width: 100px; height: 100px;
+      top: -50px; left: 50px;
+      border-radius: 100px;
+    }
+    
+    .cloud:before {
+      width: 150px; height: 150px;
+      top: -90px; right: 50px;
+      border-radius: 200px;
+    }  
+  
+   /* -------- HEADER DONE -------- */
+  

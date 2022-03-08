@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
+import '../styles/Cart.css'
 
-function Cart({items, open, sum}) {
+function Cart({items, setItems, open, setOpen, sum}) {
+
   return (
     <>
-      <div className='cart-container'>
+      <div className={open ? 'open home-cart-container' : 'home-cart-container'}>
         <div className='cart-header'>
           <h2 className="cart-opening">Cart</h2>
         </div>
@@ -25,7 +27,7 @@ function Cart({items, open, sum}) {
 
         <div className="cart-summary">
           <h3>Total: {sum} SEK</h3>
-          <Link to="/checkout"><button className="cart-checkout">Checkout</button></Link>
+          <Link to="/checkout"><button className="cart-checkout" onClick = {() => setOpen(false)}>Checkout</button></Link>
         </div>
       </div> 
     </>

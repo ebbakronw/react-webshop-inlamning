@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Product from './pages/Product';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
+
 
 function App(){  
   const [items, setItems] = useState([]);
   const [sum, setSum] = useState (0);
+
   const addProduct = (newItem) => {
     setItems([
       ...items,
@@ -36,15 +35,13 @@ function App(){
       setItems={setItems}
       countCartItems={items.length} 
       sum={sum}/>
-      
-
-
             
         <Routes>
             <Route path="/" element={<Products setSum={setSum} addProduct={addProduct}/>} />
             <Route path="/product/:id" element={<Product addProduct={addProduct}/>} />
-            <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct}/>} />
+            <Route path="/checkout" element={<Checkout sum = {sum} items = {items} addProduct={addProduct}/>} />
         </Routes>
+        <Footer />
       </BrowserRouter> 
     </div>
   );

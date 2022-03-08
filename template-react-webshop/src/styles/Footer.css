@@ -1,0 +1,21 @@
+.footer-container{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    background-color: #E2CACB; 
+}
+.footer-text{
+   margin: 0 auto;
+   text-align: center;
+}
+.cake-title{
+    font-size: 25px;
+
+}
+.adress-info{
+    font-size: 18px;
+}
+.copyright{
+    text-align: center;
+    font-size: 8px;
+}

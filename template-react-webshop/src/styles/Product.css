@@ -1,0 +1,57 @@
+.cake-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #E2CACB;
+    margin: 150px;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.product-title{
+    font-size: 25px;
+    font-weight: 800;
+}
+.product-desc{
+  margin: 0 auto;
+  width: 400px;
+}
+.product-price{
+    font-size: 24px;
+    font-weight: 600;
+}
+.product-image{
+    width: 450px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 150px;
+    box-shadow:  20px 20px 30px rgba(87, 84, 84, 0.2);
+}
+.storage-container{
+    margin-bottom: 30px;
+}
+.product-storage{
+    font-size: 12px;
+    font-weight: 400;
+}
+.toCart-btn{
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #E2CACB;
+    border: 3px solid black;
+    font-weight: 700;
+}
+.toCart-btn:hover{
+    border: 5px solid black;
+    border-top-color:#d26e71;
+    border-bottom-color: #f0b4b6;
+    border-right-color:#f09b9e;
+    border-left-color: #e9bbbb;
+}
+
+

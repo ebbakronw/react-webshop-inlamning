@@ -1,0 +1,77 @@
+/* -------- PRODUCTS START -------- */
+.products-view {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .products-title {
+    color: white;
+    background-color: #E2CACB;
+    width: 20vw;
+    height: 40px;
+    position: relative;
+  }
+  
+  .products-title-text {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .products-price{
+    font-weight: 100;
+    font-size: 13px;
+  }
+  
+  .img-page {
+    max-width: 16rem;
+    max-height: 16rem;
+  }
+  
+   .products-button {
+    display: flex;
+    margin: 5px 5px;
+    justify-content: space-evenly;
+    width: 25vw;
+  } 
+  
+   .cart-btn {
+     padding: 0.8rem 0;
+    font-size: 12px;
+    width: 10vw;
+    height: 50px;
+    background-color: #E2CACB;
+    color: white;
+    margin-top: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    border: none;
+    border-radius: 100%; 
+  /*   text-align: center;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #E2CACB;
+    border: 3px solid black;
+    font-weight: 700;
+  }
+  
+  .cart-btn:hover{
+    border: 5px solid black;
+    border-top-color:#d26e71;
+    border-bottom-color: #f0b4b6;
+    border-right-color:#f09b9e;
+    border-left-color: #e9bbbb; */
+  }
+  /* -------- PRODUCTS DONE -------- */
+  
